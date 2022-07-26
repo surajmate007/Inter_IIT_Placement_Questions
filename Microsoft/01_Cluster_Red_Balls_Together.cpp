@@ -13,7 +13,6 @@
 // with the result = 7. In order to calculate how many Ws we have between Rs we should count number of all Rs in the row before start of the main algorithm.
 // Finally the code will looks like this:
 
-
 int solution(const string & s) {
     int red_count = 0;
     // count number of Rs in the string
