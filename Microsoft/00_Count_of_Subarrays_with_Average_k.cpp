@@ -116,4 +116,3 @@ int main(){
 	// Function Call
 	cout << countKAverageSubarrays(arr, N, K);
 }
-
