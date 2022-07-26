@@ -125,4 +125,3 @@ int main()
 	cout << nodesKDistanceFromMarked(edges, V, marked, N, K);
 	return 0;
 }
-
