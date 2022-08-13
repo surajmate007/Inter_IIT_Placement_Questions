@@ -1,5 +1,5 @@
 // Link : https://leetcode.com/discuss/interview-question/2401866/Google-or-OA-or-Remove-maximum-edges
-
+// Use the logic of Post order DFS in calculating subtreesum and the count components.
 vector<vector<int>> graph;
 vector<int> nums; // value of nodes
 vector<int> subtreeSum; // sum of subtree rooted at current node
