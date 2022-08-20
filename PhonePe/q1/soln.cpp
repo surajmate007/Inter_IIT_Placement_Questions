@@ -1,36 +1,29 @@
-//DP
-int solve(int ind, vector<int>&nums){
-        if(ind>=nums.size()-1){
-            return 0;
-        } 
-        int temp=INT_MAX;
-        for(int i=1; i<=ind+nums[ind]; i++){
-            temp = min(temp, 1 + solve(ind+i,nums));  
-        }   
-       return temp;
-    }
-
-
-//GREEDY
- int jump(vector<int>& nums) {
+int maxResult(vector<int>& nums) {
         int n=nums.size();
-        int ans=0;
-        int left=0;
-        int right=0;
+        int ans[n];
+        priority_queue<pair<int,int>>pq;
+        // ans[n-1]=nums[n-1];
         
-        while(right<n-1){
+        for(int i=n-1; i>=0; i--){
             
-            int maxReach=0;
-            
-            for(int i=left; i<=right; i++){
-                maxReach=max(maxReach,i+nums[i]);
+            while(pq.size() && pq.top().second > i+nums[i] ){
+                pq.pop();
             }
             
-            left=right+1;
-            right=maxReach;
-            ans++;
+            ans[i]=nums[i];
+            
+            if(pq.size()>0){
+                ans[i] = ans[i]+pq.top().first;
+            }
+            else{
+                ans[i]+=0;
+            }
+            
+            pq.push({ans[i], i});
+            
         }
-        
-        return ans;
+        return ans[0];
+
+}
         
 
