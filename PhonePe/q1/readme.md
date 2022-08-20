@@ -1,1 +1,1 @@
-can be solved with both greedy ans dp.
+Not sure abount test cases but logic will be this only i guess.
