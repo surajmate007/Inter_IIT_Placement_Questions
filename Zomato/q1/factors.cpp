@@ -17,7 +17,7 @@ bool find_factor(ll n){
 		}
 	}
 
-	if(n1>2){
+	if(n1>2){typedef long long int ll;
 		//cout<<n1<<" ";
 		return false;
 	}
@@ -27,6 +27,9 @@ bool find_factor(ll n){
 int main(){
 	ll n;
 	cin>>n;
+	//find the factors of the number n
+	//lets say the number is of the form n=2^a*3^b*5^c
+	//ans will be (a+1)*(b+1)*(c+1) .....
 	bool ans=find_factor(n);
 	ll res=1;
 	if(ans==true){
