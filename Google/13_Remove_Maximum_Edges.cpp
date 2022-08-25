@@ -1,5 +1,7 @@
 // Link : https://leetcode.com/discuss/interview-question/2401866/Google-or-OA-or-Remove-maximum-edges
-
+// Use the logic of Post order DFS in calculating subtreesum and the count components.
+#include<bits/stdc++.h> 
+using namespace std;
 vector<vector<int>> graph;
 vector<int> nums; // value of nodes
 vector<int> subtreeSum; // sum of subtree rooted at current node
@@ -95,4 +97,16 @@ int main() {
     cout << "0\n";
     return 0;
 }
+// Test case
+/* Input-
+6
+4 2 3 1 1 1
+1 2
+1 3
+2 4
+2 5
+3 6
+Output-
+2
+*/ 
 

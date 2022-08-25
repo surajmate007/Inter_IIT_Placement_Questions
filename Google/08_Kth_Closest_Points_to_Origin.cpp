@@ -18,7 +18,6 @@ public:
         for(int i=0; i<k; i++){
             ans.push_back(dist[i].second);
         }
-        
         return ans;
     }
 };
